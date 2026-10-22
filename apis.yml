@@ -1,25 +1,76 @@
 aid: nines-com
+
 name: Nines
+
+image: https://sironamedical.com/share/home.jpg
+
 description: 'Nines is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
   backed by accel) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/nines-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- accel
+
 common:
+- type: LLMsTxt
+  url: llms/nines-com-llms.txt
+- type: Hosts
+  url: hosts/nines-com-hosts.yml
+- type: Vendors
+  url: vendors/nines-com-vendors.yml
+- type: SDKs
+  url: https://sironamedical.com/platform/sdk
+- type: PrivacyPolicy
+  url: https://sironamedical.com/privacy-policy
+- type: Newsroom
+  url: https://sironamedical.com/company/press
+- type: DeveloperPortal
+  url: https://sironamedical.com/solutions/developers
+- type: Blog
+  url: https://sironamedical.com/resources/blog
+- type: GettingStarted
+  url: https://sironamedical.com/platform/training
+- type: DomainSecurity
+  url: security/nines-com-domain-security.yml
 - type: Website
   url: http://www.nines.com
+
+apis: []
+
+x-backed-by:
+- accel
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website redirects to sironamedical.com which serves only HTML with no machine‑readable API specification.
+  evidence:
+    - url: https://sironamedical.com
+      status: 200
+  checked: '2026-10-21'
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

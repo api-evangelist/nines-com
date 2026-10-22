@@ -1,0 +1,53 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 2
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - portal
+  - website
+hosts:
+- host: api.nines.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: nines.com
+  role: api
+  relation: own
+- host: sironamedical.com
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - SDKs
+  - PrivacyPolicy
+  - Newsroom
+  - DeveloperPortal
+  - Blog
+  - GettingStarted
+  serves:
+  - docs
+  registrable_domain: sironamedical.com
+  role: portal
+  relation: other-domain
+- host: www.nines.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: nines.com
+  role: website
+  relation: own

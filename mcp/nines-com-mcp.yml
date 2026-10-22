@@ -1,0 +1,13 @@
+generated: '2026-10-21'
+method: none
+idempotency:
+  coverage: none
+
+deployment:
+  mode: none
+  install: ""
+  package: ""
+  auth: unknown
+  verified: derived
+
+# No MCP server discovered for Nines.
